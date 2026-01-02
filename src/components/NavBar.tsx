@@ -34,7 +34,7 @@ export default function Navbar() {
   ];
 
   return (
-    <nav className="fixed top-0 left-0 w-full z-50 mix-blend-difference px-4 md:px-12 py-6 flex justify-between items-center pointer-events-none text-white">
+    <nav className="fixed top-0 left-0 w-full z-50 bg-black/50 backdrop-blur-md border-b border-white/5 px-4 md:px-12 py-4 flex justify-between items-center pointer-events-none text-white">
       <div className="font-display font-bold text-xl pointer-events-auto cursor-pointer">
         RA.
       </div>
