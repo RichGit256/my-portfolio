@@ -1,0 +1,29 @@
+@import "tailwindcss";
+
+:root {
+  --background: #09090b;
+  --foreground: #ededed;
+}
+
+@layer base {
+  body {
+    @apply bg-zinc-950 text-zinc-400;
+  }
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+@layer utilities {
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+
+  .no-scrollbar {
+    -ms-overflow-style: none;
+    /* IE and Edge */
+    scrollbar-width: none;
+    /* Firefox */
+  }
+}

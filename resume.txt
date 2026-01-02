@@ -1,0 +1,43 @@
+RICHARD AROWOLO
+07460872672 | richardarowolo308@gmail.com | LinkedIn | GitHub
+Education
+Robert Gordon University, Aberdeen (Computer Science, 4 years) January 2023 - June 2027
+Predicted First Class
+Key Modules: Problem Solving and Modelling, Machine Learning, Advanced Software Design, and Web Development.
+International College at Robert Gordon University
+Key Modules: Information Security & Risk Management, Statistics, Database Systems, and Object-Oriented Programming.
+Relevant Experience & Projects
+Quantitative Analysis: DeFi Market Structure | Self-Directed Project June 2025 - June 2025
+● Analyzed 20,000+ transactions on Arbitrum using Python (Pandas) to map high-frequency trading activity.
+● Identified strategic shifts in market-maker liquidity routing towards low-cost Layer 2 scaling solutions.
+● Visualized institutional volume distribution to uncover flow patterns across decentralized exchanges.
+British Airways Data Science Virtual Internship June 2025 - June 2025
+● Completed a simulation focusing on how data science is a critical component of British Airways' success.
+● Analyzed sentiment using Python libraries (NLTK, Pandas) and identified trends for operational improvement.
+● Built a predictive model to understand factors that influence buying behavior.
+BCG Generative AI Consulting Job Simulation | Forage May 2025 - May 2025
+● Completed a virtual program involving AI-powered financial chatbot development for BCG’s GenAI consulting team.
+● Gained experience in Python programming, including the use of pandas for data manipulation.
+● Integrated and interpreted complex financial data from 10-K and 10-Q reports, employing rule-based logic to create a
+chatbot providing user-friendly financial insights.
+JPMorgan Investment Banking Job Simulation | Forage March 2024 - March 2024
+● Identified an ideal M&A target for a client based on an assessment of their strategic and financial criteria.
+● Constructed a DCF model to calculate the valuation of the M&A target and adjusted the model to account for a
+competitor bid and supply chain interruption.
+● Created a 2-pager for the client containing a company profile and summary of the auction process.
+Personal Projects
+Information Security & Risk Management | University Coursework
+● Acted as a security consultant for a mock SaaS company, evaluating over 25 assets and categorizing 50+
+vulnerabilities from a Qualys web application scan.
+● Developed a comprehensive risk register to identify and prioritize the top 15 threats to the business.
+Certifications & Achievements
+● Certification: Completed “Databases and SQL for Data Science with Python” from IBM on Coursera, enhancing
+proficiency in data manipulation and database systems.
+● Academic Recognition: Awarded a Certificate of Recognition for outstanding academic performance,
+acknowledging consistent excellence in coursework.
+Skills & Interests
+Technical Skills: Python, R, MySQL, C#, Pandas, Numpy, Power BI, Excel, Jupyter Notebook, NLTK, Vulnerability Analysis,
+Control Testing, Object-Oriented Programming
+Soft Skills: Client Communication, Data Analysis & Reporting, Cross-Team Collaboration, Entrepreneurial, Presentation,
+Problem-Solving, and Organization.
+Interests: Stock Exchange, High School Football Team Captain, Student Member of the British Computing Society
