@@ -1,7 +1,8 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { ArrowDownRight } from "lucide-react";
+import { ArrowRight, User } from "lucide-react";
+import Link from "next/link";
 
 export default function Hero() {
     return (
@@ -11,14 +12,18 @@ export default function Hero() {
                     initial={{ opacity: 0, y: 30 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
-                    className="mb-6"
+                    className="mb-8"
                 >
-                    <p className="text-brand-500 font-medium tracking-wide text-sm md:text-base mb-4 uppercase">
-                        Portfolio
-                    </p>
-                    <h1 className="font-display text-5xl md:text-8xl lg:text-9xl font-bold tracking-tight leading-[0.9] text-white mb-8">
-                        RICHARD <br />
-                        <span className="text-zinc-500">AROWOLO</span>
+                    <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-emerald-500/30 bg-emerald-500/10 text-emerald-400 text-xs font-mono mb-6 uppercase tracking-wider">
+                        <span className="relative flex h-2 w-2">
+                            <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
+                            <span className="relative inline-flex rounded-full h-2 w-2 bg-emerald-500"></span>
+                        </span>
+                        Open for Internships/Grad Roles (2026)
+                    </div>
+
+                    <h1 className="font-display text-5xl md:text-7xl lg:text-8xl font-bold tracking-tight leading-[1.1] text-white mb-8 max-w-5xl">
+                        Applying Technology and AI to <span className="text-zinc-500">Business & Finance Strategy.</span>
                     </h1>
                 </motion.div>
 
@@ -29,25 +34,15 @@ export default function Hero() {
                         transition={{ duration: 0.8, delay: 0.2, ease: [0.16, 1, 0.3, 1] }}
                         className="max-w-xl"
                     >
-                        <p className="text-lg md:text-xl text-zinc-400 leading-relaxed">
-                            Crafting high-performance digital experiences with a blend of technical precision
-                            and creative vision. As a Computer Science student at RGU, I specialize in full-stack
-                            development and data analysis, translating complex problems into elegant solutions.
+                        <p className="text-lg md:text-xl text-zinc-400 leading-relaxed mb-8">
+                            Currently exploring the intersection of AI and Financial Markets.
+                            I build systems that turn data into decision-making power.
                         </p>
-                    </motion.div>
 
-                    <motion.div
-                        initial={{ opacity: 0, scale: 0.9 }}
-                        animate={{ opacity: 1, scale: 1 }}
-                        transition={{ duration: 0.8, delay: 0.4 }}
-                        className="flex items-center gap-4"
-                    >
-                        <div className="h-16 w-16 md:h-24 md:w-24 rounded-full border border-zinc-800 flex items-center justify-center animate-spin-slow">
-                            <ArrowDownRight className="w-6 h-6 md:w-8 md:h-8 text-brand-500" />
-                        </div>
-                        <span className="text-sm text-zinc-500 uppercase tracking-widest hidden md:block">
-                            Scroll to explore
-                        </span>
+                        <Link href="/about" className="inline-flex items-center gap-3 bg-white text-black px-6 py-3 rounded-full font-medium hover:bg-zinc-200 transition-colors">
+                            <User className="w-4 h-4" />
+                            More About Me
+                        </Link>
                     </motion.div>
                 </div>
             </div>

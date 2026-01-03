@@ -1,13 +1,13 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { TrendingUp, Terminal, Activity, MapPin } from "lucide-react";
+import { TrendingUp, Terminal, Activity, MapPin, BarChart3, Lock } from "lucide-react";
 
 // Data Source
 const NOW_DATA = {
     last_updated: "January 2, 2026",
     status: "Building & Learning",
-    location: "London, UK",
+    location: "Aberdeen, UK",
     current_focus: {
         title: "The FinTech Roadmap",
         description: "Bridging the gap between Full-Stack Engineering and Quantitative Analysis."
@@ -18,14 +18,28 @@ const NOW_DATA = {
             status: "In Progress (Month 2/6)",
             resource: "Fast.ai & Andrew Ng",
             goal: "Build a sentiment analysis bot for earnings calls.",
-            progress: 33
+            progress: { filled: 2, total: 6 }
         },
         {
-            topic: "Financial Markets",
+            topic: "Market Analysis Study",
             status: "Deep Dive",
-            details: "Studying Market Structure, ETF composition, and Algorithmic Trading strategies.",
+            details: "Analyzing ETF composition, Market Structure, and backtesting Algorithmic Trading strategies.",
             reading: "The Man Who Solved the Market",
             progress: 0
+        }
+    ],
+    market_analysis: [
+        {
+            id: "SYS_01",
+            title: "Systematic Investing",
+            desc: "Developing rule-based execution systems to minimize emotional bias in trading.",
+            status: "ACTIVE"
+        },
+        {
+            id: "SYS_02",
+            title: "DeFi Intelligence",
+            desc: "Auditing smart contract liquidity flows and on-chain tokenomics.",
+            status: "ACTIVE"
         }
     ]
 };
@@ -67,26 +81,74 @@ export default function Now() {
 
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-24">
 
-                    {/* Visual / Focus */}
-                    <motion.div
-                        initial={{ opacity: 0, x: -20 }}
-                        whileInView={{ opacity: 1, x: 0 }}
-                        viewport={{ once: true }}
-                        transition={{ duration: 0.8, delay: 0.2 }}
-                    >
-                        <h4 className="text-sm font-mono text-zinc-500 uppercase tracking-widest mb-6">Current Focus</h4>
-                        <div className="bg-zinc-900/50 border border-zinc-800 p-8 rounded-2xl relative overflow-hidden group">
-                            <div className="absolute top-0 right-0 p-4 opacity-10 group-hover:opacity-20 transition-opacity">
-                                <TrendingUp className="w-24 h-24 text-brand-500" />
+                    {/* Left Column: Focus & Research */}
+                    <div className="space-y-12">
+                        {/* Current Focus */}
+                        <motion.div
+                            initial={{ opacity: 0, x: -20 }}
+                            whileInView={{ opacity: 1, x: 0 }}
+                            viewport={{ once: true }}
+                            transition={{ duration: 0.8, delay: 0.2 }}
+                        >
+                            <h4 className="text-sm font-mono text-zinc-500 uppercase tracking-widest mb-6">Current Focus</h4>
+                            <div className="bg-zinc-900/50 border border-zinc-800 p-8 rounded-2xl relative overflow-hidden group">
+                                <div className="absolute top-0 right-0 p-4 opacity-10 group-hover:opacity-20 transition-opacity">
+                                    <TrendingUp className="w-24 h-24 text-brand-500" />
+                                </div>
+                                <h3 className="text-2xl font-bold text-white mb-4">{NOW_DATA.current_focus.title}</h3>
+                                <p className="text-zinc-400 leading-relaxed mb-6">
+                                    {NOW_DATA.current_focus.description}
+                                </p>
                             </div>
-                            <h3 className="text-2xl font-bold text-white mb-4">{NOW_DATA.current_focus.title}</h3>
-                            <p className="text-zinc-400 leading-relaxed mb-6">
-                                {NOW_DATA.current_focus.description}
-                            </p>
-                        </div>
-                    </motion.div>
+                        </motion.div>
 
-                    {/* Timeline */}
+                        {/* Market Analysis (Bloomberg Card Redesigned) */}
+                        <motion.div
+                            initial={{ opacity: 0, x: -20 }}
+                            whileInView={{ opacity: 1, x: 0 }}
+                            viewport={{ once: true }}
+                            transition={{ duration: 0.8, delay: 0.3 }}
+                        >
+                            <h4 className="text-sm font-mono text-zinc-500 uppercase tracking-widest mb-6">Quantitative Research</h4>
+                            <div className="bg-black border border-zinc-800 p-6 rounded-xl font-mono text-sm shadow-2xl relative overflow-hidden">
+                                {/* Top Decoration */}
+                                <div className="flex justify-between items-center mb-6 border-b border-zinc-900 pb-4">
+                                    <span className="text-emerald-500 font-bold uppercase tracking-wider flex items-center gap-2">
+                                        <BarChart3 className="w-4 h-4" /> Market Systems
+                                    </span>
+                                    <div className="flex gap-1">
+                                        <div className="w-1.5 h-1.5 rounded-full bg-zinc-700" />
+                                        <div className="w-1.5 h-1.5 rounded-full bg-zinc-700" />
+                                    </div>
+                                </div>
+
+                                <div className="space-y-6">
+                                    {NOW_DATA.market_analysis.map((item, i) => (
+                                        <div key={i} className="group/item">
+                                            <div className="flex justify-between text-zinc-600 mb-1 text-[10px] uppercase tracking-wider">
+                                                <span>{item.id}</span>
+                                                <span className="text-emerald-500/50 group-hover/item:text-emerald-500 transition-colors">{item.status}</span>
+                                            </div>
+                                            <h4 className="text-white font-bold mb-1 group-hover/item:text-emerald-400 transition-colors">{item.title}</h4>
+                                            <p className="text-zinc-500 text-xs leading-relaxed">
+                                                {item.desc}
+                                            </p>
+                                        </div>
+                                    ))}
+                                </div>
+
+                                <div className="mt-6 pt-4 border-t border-zinc-900 flex justify-between text-[10px] text-zinc-600 uppercase">
+                                    <span>Algo_Engine_v1</span>
+                                    <span className="flex items-center gap-1.5">
+                                        <span className="w-1.5 h-1.5 bg-emerald-500 rounded-full animate-pulse" />
+                                        System Online
+                                    </span>
+                                </div>
+                            </div>
+                        </motion.div>
+                    </div>
+
+                    {/* Right Column: Timeline */}
                     <motion.div
                         initial={{ opacity: 0, x: 20 }}
                         whileInView={{ opacity: 1, x: 0 }}
@@ -108,14 +170,24 @@ export default function Now() {
                                             </span>
                                         </div>
 
-                                        {item.progress > 0 && (
+                                        {/* Progress Bar */}
+                                        {typeof item.progress === 'object' ? (
+                                            <div className="flex gap-2 w-full mt-2">
+                                                {Array.from({ length: (item.progress as any).total }).map((_, i) => (
+                                                    <div
+                                                        key={i}
+                                                        className={`h-2 flex-1 rounded-sm ${i < (item.progress as any).filled ? 'bg-white' : 'bg-zinc-800'}`}
+                                                    />
+                                                ))}
+                                            </div>
+                                        ) : (item.progress > 0 && (
                                             <div className="w-full h-1.5 bg-zinc-800 rounded-full overflow-hidden">
                                                 <div
                                                     className="h-full bg-brand-500"
                                                     style={{ width: `${item.progress}%` }}
                                                 />
                                             </div>
-                                        )}
+                                        ))}
 
                                         <div className="text-zinc-400 text-sm space-y-1">
                                             {item.resource && <p><span className="text-zinc-600">Resource:</span> {item.resource}</p>}
