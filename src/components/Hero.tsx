@@ -14,6 +14,10 @@ export default function Hero() {
                     transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
                     className="mb-8"
                 >
+                    <h2 className="font-display text-3xl md:text-4xl font-bold text-white mb-6">
+                        Hi, I'm Richard.
+                    </h2>
+
                     <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-emerald-500/30 bg-emerald-500/10 text-emerald-400 text-xs font-mono mb-6 uppercase tracking-wider">
                         <span className="relative flex h-2 w-2">
                             <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
