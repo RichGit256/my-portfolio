@@ -43,7 +43,7 @@ export default function Hero() {
                             I build systems that turn data into decision-making power.
                         </p>
 
-                        <Link href="/about" className="inline-flex items-center gap-3 bg-white text-black px-6 py-3 rounded-full font-medium hover:bg-zinc-200 transition-colors">
+                        <Link href="/about" className="inline-flex items-center gap-3 bg-white text-black px-6 py-3 rounded-full font-medium hover:bg-zinc-200 transition-colors relative z-30">
                             <User className="w-4 h-4" />
                             More About Me
                         </Link>

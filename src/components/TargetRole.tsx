@@ -16,7 +16,7 @@ const ROLE_DATA = {
 
 export default function TargetRole() {
     return (
-        <section className="px-4 md:px-12 py-12 relative z-20 -mt-12 md:-mt-20 mb-20">
+        <section className="px-4 md:px-12 py-12 relative z-20 -mt-12 md:-mt-8 mb-20">
             <div className="max-w-7xl mx-auto">
                 <motion.div
                     initial={{ opacity: 0, y: 30 }}
